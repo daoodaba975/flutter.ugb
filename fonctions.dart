@@ -1,8 +1,14 @@
-int addition(int a, int b) {
-  return a + b;
+// Fonction pair ou impair
+void estPair(int nombre) {
+  if (nombre % 2 == 0) {
+    return print("Pair");
+  } else {
+    return print("Impair");
+  }
 }
 
 void main() {
-  int resultat = addition(5, 3);
-  print("Résultat : $resultat");
+  estPair(5);
+  estPair(10);
+  estPair(16);
 }

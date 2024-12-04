@@ -3,25 +3,28 @@ class Etudiant {
   String nom;
   int age;
   String filiere;
+  String adresse;
 
   // Constructeur
-  Etudiant(this.nom, this.age, this.filiere);
+  Etudiant(this.nom, this.age, this.filiere, this.adresse);
 
   // Méthode
-  void afficherDetails() {
-    print("Nom : $nom");
-    print("Âge : $age");
-    print("Filière : $filiere");
+  void sePresenter() {
+    print("Je mappelle $nom, jai $age et je suis en $filiere");
+  }
+
+  void ouJhabite() {
+    print("Je mappelle $nom et Jhabite à : $adresse");
   }
 }
 
 void main() {
   // Création d'un objet de type Étudiant
-  Etudiant etudiant1 = Etudiant("Modou", 20, "Informatique");
-  Etudiant etudiant2 = Etudiant("Fatou", 22, "Mathématiques");
+  Etudiant etudiant1 = Etudiant("Modou", 20, "Informatique", "UGB");
+  Etudiant etudiant2 = Etudiant("Astou", 28, "Geo", "Saint-Louis");
 
   // Appel de la méthode pour afficher les détails
-  etudiant1.afficherDetails();
+  etudiant1.sePresenter();
   print("---");
-  etudiant2.afficherDetails();
+  etudiant2.ouJhabite();
 }
