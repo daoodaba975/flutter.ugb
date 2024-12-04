@@ -1,4 +1,3 @@
-// Fonction pair ou impair
 void estPair(int nombre) {
   if (nombre % 2 == 0) {
     return print("Pair");
