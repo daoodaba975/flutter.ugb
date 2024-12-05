@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
 
       // Définit la page d'accueil de l'application.
       // MyHomePage est un StatefulWidget.
-      home: const MyHomePage(title: 'App'),
+      home: const MyHomePage(title: 'App Flutter'),
     );
   }
 }
@@ -47,6 +47,7 @@ class MyHomePage extends StatefulWidget {
   final String title;
 
   @override
+  // Initiakisation de l'etat de MyHomePage.
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
@@ -71,7 +72,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         // Définit une couleur d'arrière-plan basée sur le thème.
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(widget.title),
+        title: Text(widget.title, style: const TextStyle(color: Colors.green)),
       ),
 
       // Le corps principal de l'interface utilisateur.
@@ -84,6 +85,7 @@ class _MyHomePageState extends State<MyHomePage> {
             // Texte statique affichant un message à l'utilisateur.
             const Text(
               'Vous avez appuyé sur le bouton :',
+              style: TextStyle(fontSize: 20),
             ),
             // Texte dynamique affichant la valeur actuelle du compteur.
             Text(
