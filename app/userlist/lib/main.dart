@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'dart:convert'; // Pour décoder le JSON
-import 'package:http/http.dart' as http; // Pour les requêtes HTTP
+import 'dart:convert';
+import 'package:http/http.dart' as http;
 
 void main() {
   runApp(MyApp());
@@ -35,7 +35,7 @@ class _HomeScreenState extends State<HomeScreen> {
         await http.get(Uri.parse('https://jsonplaceholder.typicode.com/users'));
 
     if (response.statusCode == 200) {
-      // Décoder la réponse JSON
+      // Décodage de la réponse JSON
       List jsonResponse = json.decode(response.body);
       return jsonResponse.map((user) => User.fromJson(user)).toList();
     } else {
